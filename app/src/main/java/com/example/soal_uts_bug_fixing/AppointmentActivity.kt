@@ -109,8 +109,8 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
                 val intentToResult = Intent(this@AppointmentActivity, ResultActivity::class.java)
                 intentToResult.putExtra(EXTRA_TELEFON, binding.kontakEdt.text.toString())
                 intentToResult.putExtra(EXTRA_TANGGAL, dateInput)
-                intentToResult.putExtra(EXTRA_WAKTU, timeInput)
-                intentToResult.putExtra(EXTRA_TIPE, tipePertemuan)
+                (EXTRA_WAKTU, timeInput)
+                (EXTRA_TIPE, tipePertemuan)
 
                 intentToResult.putExtra(FormActivity.EXTRA_NAMA, nama)
                 intentToResult.putExtra(FormActivity.EXTRA_IDENTITAS, identitas)
