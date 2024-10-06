@@ -22,6 +22,7 @@ class FormActivity : AppCompatActivity() {
         binding = ActivityFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
         gendersArray = resources.getStringArray()
+        // Gunakan array yang sudah di buat di folder values
 
 
         with(binding){
