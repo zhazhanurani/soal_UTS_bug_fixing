@@ -12,7 +12,6 @@ import com.example.soal_uts_bug_fixing.databinding.ActivityFormBinding
 class FormActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFormBinding
     companion object{
-
     }
 
     private lateinit var gendersArray : Array<String>
@@ -49,7 +48,7 @@ class FormActivity : AppCompatActivity() {
                     intentToAppointment.putExtra(EXTRA_IDENTITAS, identitasEdt.text.toString())
                     intentToAppointment.putExtra(EXTRA_GENDER, genderInput)
                     intentToAppointment.putExtra(EXTRA_KELUHAN, keluhanEdt.text.toString())
-                    startActivity(intentToAppointment)
+                    //
                 }else{
                     Toast.makeText(this@FormActivity, "MASIH ADA KOLOM YANG KOSONG", Toast.LENGTH_SHORT).show()
                 }

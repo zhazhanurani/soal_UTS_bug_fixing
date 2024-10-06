@@ -62,7 +62,7 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
             tombolSubmit.setOnClickListener {
                 if(fieldNotEmpty()){
                     val dialog = DialogExit()
-                    dialog.show(supportFragmentManager, "dialogExit")
+                    //
                 }else{
                     Toast.makeText(this@AppointmentActivity, "MASIH ADA KOLOM YANG KOSONG", Toast.LENGTH_SHORT).show()
                 }
@@ -84,22 +84,24 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
                     inputLayout.visibility = View.VISIBLE
                 }
             }
+
         }
+
     }
 
 
     override fun onDateSet(p0: android.widget.DatePicker?, day: Int, month: Int, year:
     Int) {
-
+        //
     }
 
     override fun onTimeSet(p0: android.widget.TimePicker?, hour: Int, menit:Int) {
         timeInput = String.format("%02d:%02d", hour, minute)
-        binding.timerBtn.text = timeInput
+        binding.timerTxt.text = timeInput
     }
 
 
-//    BUAT AKSI SETELAH KONFIRMASI DIALOG BOX
+//  AKSI SETELAH KONFIRMASI DIALOG BOX
     override fun onDialogResult(result: Boolean) {
         val nama = intent.getStringExtra(FormActivity.EXTRA_NAMA)
         val identitas = intent.getStringExtra(FormActivity.EXTRA_IDENTITAS)
@@ -108,8 +110,8 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
             if (result) {
                 val intentToResult = Intent(this@AppointmentActivity, ResultActivity::class.java)
                 intentToResult.putExtra(EXTRA_TELEFON, binding.kontakEdt.text.toString())
-                intentToResult.putExtra(EXTRA_TANGGAL, dateInput)
-                (EXTRA_WAKTU, timeInput)
+                intentToResult.putExtra(EXTRA_TANGGAL, binding.kalenderTxt.text.toString())
+                (EXTRA_WAKTU, binding.timerTxt.text.toString())
                 (EXTRA_TIPE, tipePertemuan)
 
                 intentToResult.putExtra(FormActivity.EXTRA_NAMA, nama)
@@ -160,7 +162,7 @@ class DatePicker: DialogFragment() {
 }
 
 class TimePicker: DialogFragment() {
-
+//
 }
 
 class DialogExit : DialogFragment() {
