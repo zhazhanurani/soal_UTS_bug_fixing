@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="24sp"
+    tools:context=".AppointmentActivity">
+
+
+    <TextView
+        android:layout_marginTop="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JADWALKAN PERTEMUAN"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#C7253E"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Untuk melakukan penjadwalan pertemuan, mohon isikan form di bawah ini"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:hint="Masukkan Kontak Anda"
+        app:helperText="Masukan Kontak yang bisa di hubungi"
+        app:errorEnabled="true"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kontak_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:text="Ingin melakukan pertemuan secara ?"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Online" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Offline" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:hint="Dimana anda ingin bertemu"
+        app:helperText="Lokasi pertemuan yang di inginkan, isi yang bener!"
+        app:errorEnabled="true"
+        app:endIconMode="clear_text"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lokasi_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/kalender_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:text="Pilih Tanggal Pertemuan"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/spinner"
+        android:drawableEnd="@drawable/calendar"
+        android:padding="16sp"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+        android:id="@+id/timer_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:text="Pilih Waktu Pertemuan"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:background="@drawable/spinner"
+        android:drawableEnd="@drawable/clock"
+        android:padding="16sp"
+        android:textSize="16sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48sp"
+        android:paddingHorizontal="20sp"
+        android:text="Lanjutkan"
+        android:background="@drawable/input_field"
+        android:backgroundTint="#C7253E"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"/>
+
+<!--    <TimePicker-->
+<!--        android:id="@+id/timePicker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:timePickerMode="spinner"-->
+<!--        android:layout_height="wrap_content" />-->
+
+
+</LinearLayout>

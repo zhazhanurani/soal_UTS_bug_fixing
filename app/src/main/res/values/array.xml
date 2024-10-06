@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_descriptions">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Transexual Male</item>
+        <item>Transexual Female</item>
+        <item>Metrosexual Male</item>
+        <item>Metrosexual Female</item>
+        <item>Male, But Curious What Being a Female is Like</item>
+        <item>Female, But Curious What Being a Male is Like</item>
+        <item>Hermaphrodite with Predominant Male Leanings</item>
+        <item>Hermaphrodite with Predominant Female Leanings</item>
+        <item>Hermaphrodite with No Strong Gender Leanings</item>
+        <item>Conjoined Twin - Male</item>
+        <item>Conjoined Twin - Female</item>
+        <item>Born Without Genitals - Identify as a Male</item>
+        <item>Born Without Genitals - Identify as a Female</item>
+        <item>Born Without Genitals - Proud of it</item>
+        <item>Sentient Artificial Intelligence With No Gender</item>
+        <item>Sentient Artificial Intelligence - Identifies as Male</item>
+        <item>Sentient Artificial Intelligence - Identifies as Female</item>
+        <item>Household Pet That Walked Across the Keyboard - Male</item>
+        <item>Household Pet That Walked Across the Keyboard - Female</item>
+        <item>Mc Donalds Burger</item>
+        <item>Attack Helicopter</item>
+        <item>CILOK MANG UJANG</item>
+    </string-array>
+</resources>

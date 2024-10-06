@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C7253E"
+    android:gravity="center_horizontal"
+    tools:context=".ResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_margin="32sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8sp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gambar_atas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="20sp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130sp"
+                        android:src="@drawable/appointment"/>
+
+                    <TextView
+                        android:layout_marginTop="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BERHASIL !"
+                        android:textSize="24sp"
+                        android:textColor="#C7253E"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/poppins_bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kamu telah berhasil membuat jadwal pertemuan dengan dokter"
+                        android:layout_marginHorizontal="20sp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp"
+                android:text="Berikut data pertemuan yang telah anda inputkan"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Nama:"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/nama_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:padding="10sp"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Rizki Maulana" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Gender:"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/gender_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:padding="10sp"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Laki Laki" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Nomor identitas:"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/identitas_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:padding="10sp"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="3471098219870002" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Tipe pertemuan:"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/tipe_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:padding="10sp"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Online" />
+
+
+            <TextView
+                android:id="@+id/lokasi_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="lokasi pertemuan:"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/lokasi_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:padding="10sp"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Sv DTEDI"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Tanggal pertemuan :"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/tanggal_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tanggal Pertemuan"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/calendar"
+                android:padding="16sp"
+                android:textSize="16sp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Waktu pertemuan :"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium" />
+
+            <TextView
+                android:id="@+id/waktu_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Waktu Pertemuan"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:background="@drawable/spinner"
+                android:backgroundTint="@color/white"
+                android:drawableEnd="@drawable/clock"
+                android:padding="16sp"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Kembali ke menu"
+        android:background="@drawable/input_field"
+        android:paddingHorizontal="20sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginBottom="60sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
