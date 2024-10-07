@@ -59,6 +59,8 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
                 timePicker.show(supportFragmentManager, "timePicker")
             }
 
+
+
             tombolSubmit.setOnClickListener {
                 if(fieldNotEmpty()){
                     val dialog = DialogExit()
@@ -96,7 +98,7 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
     }
 
     override fun onTimeSet(p0: android.widget.TimePicker?, hour: Int, menit:Int) {
-        timeInput = String.format("%02d:%02d", hour, minute)
+        timeInput = String.format("%02d:%02d", hour, menit)  // Menggunakan menit, bukan minute
         binding.timerTxt.text = timeInput
     }
 
@@ -111,8 +113,10 @@ class AppointmentActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListe
                 val intentToResult = Intent(this@AppointmentActivity, ResultActivity::class.java)
                 intentToResult.putExtra(EXTRA_TELEFON, binding.kontakEdt.text.toString())
                 intentToResult.putExtra(EXTRA_TANGGAL, binding.kalenderTxt.text.toString())
-                (EXTRA_WAKTU, binding.timerTxt.text.toString())
-                (EXTRA_TIPE, tipePertemuan)
+
+
+                intentToResult.putExtra(EXTRA_WAKTU, binding.timerTxt.text.toString()) //menambahkan intentToResult.putExtra
+                intentToResult.putExtra(EXTRA_TIPE, tipePertemuan) //menambahkan intentToResult.putExtra
 
                 intentToResult.putExtra(FormActivity.EXTRA_NAMA, nama)
                 intentToResult.putExtra(FormActivity.EXTRA_IDENTITAS, identitas)
@@ -168,6 +172,8 @@ class TimePicker: DialogFragment() {
 class DialogExit : DialogFragment() {
 
     interface DialogListener {
+        abstract val tombolKalender: Any
+
         fun onDialogResult(result: Boolean)
     }
     private lateinit var listener: DialogListener
